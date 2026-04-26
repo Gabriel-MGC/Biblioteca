@@ -1,0 +1,95 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0ede6;
+    padding: 24px;
+    color: #2c2c2c;
+}
+
+header {
+    background: #3d2b1f;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+header p { color: #c8b89e; font-size: 0.85rem; margin-top: 4px; }
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista { grid-column: 1 / -1; }
+
+.card h2 { font-size: 1rem; margin-bottom: 4px; }
+
+.verde  h2 { color: #27ae60; }
+.azul   h2 { color: #2980b9; }
+.laranja h2 { color: #d35400; }
+.roxo   h2 { color: #7d3c98; }
+
+label { font-size: 0.8rem; font-weight: 700; color: #666; text-transform: uppercase; }
+
+input {
+    padding: 9px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    width: 100%;
+}
+input:focus { outline: none; border-color: #3498db; }
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 4px;
+}
+
+.verde  button { background: #2ecc71; }
+.azul   button { background: #3498db; }
+.laranja button { background: #e67e22; }
+.roxo   button { background: #9b59b6; }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th { background: #f5f0e8; padding: 9px 12px; text-align: left; font-size: 0.75rem; text-transform: uppercase; color: #888; }
+td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+
+.badge { padding: 3px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+.disp  { background: #eafaf1; color: #27ae60; }
+.emp   { background: #ebf5fb; color: #2980b9; }
+.atr   { background: #fdedec; color: #e74c3c; }
+
+@media (max-width: 700px) {
+    main { grid-template-columns: 1fr; }
+    .lista { grid-column: 1; }
+}
+
+.mensagem {
+    max-width: 960px;
+    margin: 0 auto 16px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.sucesso { background: #eafaf1; color: #27ae60; border: 1px solid #a9dfbf; }
+.erro    { background: #fdedec; color: #e74c3c; border: 1px solid #f1948a; }
+.alerta  { background: #fef9e7; color: #d35400; border: 1px solid #f9e79f; }
